@@ -30,7 +30,7 @@ class SettingsActivity : AppCompatActivity() {
                 //
                 // apply persisted value
                 val sharedPref = PreferenceManager.getDefaultSharedPreferences(activity)
-                setRemoteMACAddressPrefSummary(sharedPref.getString(PREF_KEY_REMOTE_MAC_ADDRESS, "00:00:00:00:00:00"))
+                sharedPref.getString(PREF_KEY_REMOTE_MAC_ADDRESS, "00:00:00:00:00:00")?.let { setRemoteMACAddressPrefSummary(it) }
                 //
                 // validate updates and apply is valid
                 findPreference(PREF_KEY_REMOTE_MAC_ADDRESS).setOnPreferenceChangeListener({ preference: Preference?, value: Any? ->

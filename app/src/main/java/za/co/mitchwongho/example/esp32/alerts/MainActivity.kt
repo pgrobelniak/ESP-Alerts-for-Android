@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         PreferenceManager.setDefaultValues(this, R.xml.preferences, false)
 
-        fab.setOnClickListener({ view ->
+        fab.setOnClickListener { view ->
 
             val enabled = NotificationManagerCompat.getEnabledListenerPackages(this).contains(BuildConfig.APPLICATION_ID)
             Timber.d("Notification Listener Enabled $enabled")
@@ -50,14 +50,16 @@ class MainActivity : AppCompatActivity() {
                     })
                     val names: Array<String> = installedApps.map { applicationInfo -> packageManager.getApplicationLabel(applicationInfo).toString() }.toTypedArray()
 
-                    val prefsAllowedPackages: MutableSet<String> = MainApplication.sharedPrefs.getStringSet(MainApplication.PREFS_KEY_ALLOWED_PACKAGES, mutableSetOf())
+                    val prefsAllowedPackages: Set<String>? = MainApplication.sharedPrefs.getStringSet(MainApplication.PREFS_KEY_ALLOWED_PACKAGES, mutableSetOf())
                     val checkedItems: BooleanArray = BooleanArray(installedApps.size)
                     for (i in names.indices) {
-                        checkedItems[i] = prefsAllowedPackages.contains(installedApps[i].packageName)
+                        if (prefsAllowedPackages != null) {
+                            checkedItems[i] = prefsAllowedPackages.contains(installedApps[i].packageName)
+                        }
                     }
 
                     val modifiedList: ArrayList<String> = arrayListOf<String>()
-                    modifiedList.addAll(prefsAllowedPackages)
+                    prefsAllowedPackages?.let { modifiedList.addAll(it) }
 
                     // show Apps
                     val builder: AlertDialog.Builder = AlertDialog.Builder(this)
@@ -101,7 +103,7 @@ class MainActivity : AppCompatActivity() {
 
                 }
             }
-        })
+        }
 
     }
 
