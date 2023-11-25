@@ -1,5 +1,6 @@
 package pl.vortexinfinitum.espalerts
 
+import android.Manifest
 import android.content.DialogInterface
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -8,6 +9,7 @@ import android.os.Bundle
 import android.preference.PreferenceManager
 import android.provider.Settings
 import android.support.design.widget.FloatingActionButton
+import android.support.v4.app.ActivityCompat
 import android.support.v4.app.NotificationManagerCompat
 import android.support.v7.app.AlertDialog
 import android.support.v7.app.AppCompatActivity
@@ -18,6 +20,7 @@ import pl.vortexinfinitum.espalerts.app.ForegroundService
 import pl.vortexinfinitum.espalerts.app.MainApplication
 import pl.vortexinfinitum.espalerts.app.SettingsActivity
 import java.util.*
+import kotlin.collections.ArrayList
 
 class MainActivity : AppCompatActivity() {
 
@@ -140,6 +143,15 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         startService(Intent(this, ForegroundService::class.java))
         Timber.w("onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.BLUETOOTH_CONNECT) != PackageManager.PERMISSION_GRANTED) {
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.BLUETOOTH_CONNECT), 0);
+            }
+        }
     }
 
     override fun onDestroy() {

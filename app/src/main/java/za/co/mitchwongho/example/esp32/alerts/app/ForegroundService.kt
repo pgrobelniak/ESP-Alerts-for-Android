@@ -16,12 +16,12 @@ import android.preference.PreferenceManager
 import android.support.v4.app.NotificationCompat
 import android.support.v4.content.LocalBroadcastManager
 import no.nordicsemi.android.ble.BleManager
-import timber.log.Timber
 import pl.vortexinfinitum.espalerts.BuildConfig
 import pl.vortexinfinitum.espalerts.MainActivity
 import pl.vortexinfinitum.espalerts.R
 import pl.vortexinfinitum.espalerts.ble.LEManager
 import pl.vortexinfinitum.espalerts.ble.LeManagerCallbacks
+import timber.log.Timber
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*
