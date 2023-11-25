@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts
+package pl.vortexinfinitum.espalerts
 
 import org.junit.Test
 

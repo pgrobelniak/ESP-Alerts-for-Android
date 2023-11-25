@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts.app
+package pl.vortexinfinitum.espalerts.app
 
 import android.content.BroadcastReceiver
 import android.content.Context

@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts.app
+package pl.vortexinfinitum.espalerts.app
 
 import android.annotation.TargetApi
 import android.app.*
@@ -17,11 +17,11 @@ import android.support.v4.app.NotificationCompat
 import android.support.v4.content.LocalBroadcastManager
 import no.nordicsemi.android.ble.BleManager
 import timber.log.Timber
-import za.co.mitchwongho.example.esp32.alerts.BuildConfig
-import za.co.mitchwongho.example.esp32.alerts.MainActivity
-import za.co.mitchwongho.example.esp32.alerts.R
-import za.co.mitchwongho.example.esp32.alerts.ble.LEManager
-import za.co.mitchwongho.example.esp32.alerts.ble.LeManagerCallbacks
+import pl.vortexinfinitum.espalerts.BuildConfig
+import pl.vortexinfinitum.espalerts.MainActivity
+import pl.vortexinfinitum.espalerts.R
+import pl.vortexinfinitum.espalerts.ble.LEManager
+import pl.vortexinfinitum.espalerts.ble.LeManagerCallbacks
 import java.text.DateFormat
 import java.text.SimpleDateFormat
 import java.util.*

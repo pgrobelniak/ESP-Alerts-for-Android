@@ -1,10 +1,10 @@
-package za.co.mitchwongho.example.esp32.alerts.app
+package pl.vortexinfinitum.espalerts.app
 
 import android.content.Context
 import android.content.SharedPreferences
 import android.support.multidex.MultiDexApplication
 import timber.log.Timber
-import za.co.mitchwongho.example.esp32.alerts.BuildConfig
+import pl.vortexinfinitum.espalerts.BuildConfig
 
 /**
  *

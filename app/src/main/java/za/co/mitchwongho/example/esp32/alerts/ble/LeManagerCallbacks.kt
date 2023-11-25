@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts.ble
+package pl.vortexinfinitum.espalerts.ble
 
 import android.bluetooth.BluetoothDevice
 import no.nordicsemi.android.ble.BleManagerCallbacks

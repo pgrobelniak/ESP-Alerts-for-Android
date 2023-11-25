@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts.app
+package pl.vortexinfinitum.espalerts.app
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.preference.PreferenceFragment
 import android.preference.PreferenceManager
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
-import za.co.mitchwongho.example.esp32.alerts.R
+import pl.vortexinfinitum.espalerts.R
 import java.util.regex.Pattern
 
 /**

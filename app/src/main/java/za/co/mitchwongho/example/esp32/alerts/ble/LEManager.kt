@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts.ble
+package pl.vortexinfinitum.espalerts.ble
 
 import android.bluetooth.BluetoothGatt
 import android.bluetooth.BluetoothGattCharacteristic
@@ -15,8 +15,8 @@ import no.nordicsemi.android.ble.callback.FailCallback
 import no.nordicsemi.android.ble.callback.MtuCallback
 import no.nordicsemi.android.ble.callback.SuccessCallback
 import timber.log.Timber
-import za.co.mitchwongho.example.esp32.alerts.app.ForegroundService
-import za.co.mitchwongho.example.esp32.alerts.app.SettingsActivity
+import pl.vortexinfinitum.espalerts.app.ForegroundService
+import pl.vortexinfinitum.espalerts.app.SettingsActivity
 import java.util.*
 
 /**

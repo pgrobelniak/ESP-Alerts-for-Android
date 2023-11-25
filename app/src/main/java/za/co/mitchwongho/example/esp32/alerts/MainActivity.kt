@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts
+package pl.vortexinfinitum.espalerts
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -14,9 +14,9 @@ import android.support.v7.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
 import timber.log.Timber
-import za.co.mitchwongho.example.esp32.alerts.app.ForegroundService
-import za.co.mitchwongho.example.esp32.alerts.app.MainApplication
-import za.co.mitchwongho.example.esp32.alerts.app.SettingsActivity
+import pl.vortexinfinitum.espalerts.app.ForegroundService
+import pl.vortexinfinitum.espalerts.app.MainApplication
+import pl.vortexinfinitum.espalerts.app.SettingsActivity
 import java.util.*
 
 class MainActivity : AppCompatActivity() {

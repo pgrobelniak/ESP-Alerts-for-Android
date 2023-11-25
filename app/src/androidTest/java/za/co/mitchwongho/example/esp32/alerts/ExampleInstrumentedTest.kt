@@ -1,4 +1,4 @@
-package za.co.mitchwongho.example.esp32.alerts
+package pl.vortexinfinitum.espalerts
 
 import android.support.test.InstrumentationRegistry
 import android.support.test.runner.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getTargetContext()
-        assertEquals("za.co.mitchwongho.example.esp32.alerts", appContext.packageName)
+        assertEquals("pl.vortexinfinitum.espalerts", appContext.packageName)
     }
 }
